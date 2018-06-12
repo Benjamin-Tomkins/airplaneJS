@@ -37,7 +37,7 @@ Create feature, spec, and .js files :
 
 Note: all files should use the :</br>
 ``` 'use strict';```</br>
-at the top of each page to sensure all JavaScript runs in Strict mode, to ensure compliance</br>
+at the top of each page to ensure all JavaScript runs in Strict mode, to ensure compliance</br>
 
 
 ### Steps for first user case reconstruction
