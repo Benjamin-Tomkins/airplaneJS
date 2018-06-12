@@ -1,6 +1,6 @@
 # Translation Steps For Airport Challenge into .JS
 
-### First User Story
+### User Stories
 ```
 
 As an air traffic controller
