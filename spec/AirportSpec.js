@@ -18,15 +18,14 @@ describe('Airport', function(){
     describe("Under normal conditions", function () {
         beforeEach(function () {
             weather.isStormy.and.returnValue(false);
+            airport.clearForLanding(plane);
         });
 
         it('Can clear planes for landing', function () {
-            airport.clearForLanding(plane);
             expect(airport.planes()).toEqual([plane]);
         });
 
         it('Can clear planes for takeoff', function () {
-            airport.clearForLanding(plane);
             airport.clearForTakeOff(plane);
             expect(airport.planes()).toEqual([]);
         });
