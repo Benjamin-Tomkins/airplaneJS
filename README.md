@@ -123,7 +123,7 @@ in src.Plane.js :
 
 Run the ```SpecRunner.html```</br>
 
-in src/Airport.js :
+in src/AirportSpec.js :
 ```
 
 + Update the plane instantiation to use a jasmine createSpy that simulates the plane having a lamd method 	...[cs]
