@@ -242,6 +242,14 @@ in spec/AirportSpec.js
 
 ```
 
+Run the ```SpecRunner.html```</br>
+Note: all tests should be green
+
+
+
+
+
+
 
 
 
