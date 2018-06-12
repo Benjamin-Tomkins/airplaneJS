@@ -96,7 +96,7 @@ in src/Airport.js
 ```
 
 + define an Airport(){} function
-+ defie an Airport prototype with planes method
++ define an Airport prototype with planes method 	...[proto]
 
 ```
 
