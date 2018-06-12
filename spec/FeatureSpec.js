@@ -47,7 +47,6 @@ describe('Feature Test:', function() {
             expect(function () { plane.land(airport);}).toThrowError('cannot land during stormy weather');
             expect(airport.planes()).not.toContain(plane);
         });
-        
-    });
 
+    });
 });
