@@ -1,30 +1,35 @@
 "use strict";
-describe('Feature Test:', function(){
+
+
+describe('Feature Test:', function() {
 
     let plane;
     let airport;
 
-    beforeEach(function(){
+    beforeEach(function() {
         plane = new Plane();
         airport = new Airport();
     });
+    
 
-    describe('under normal conditions', function () {
-        beforeEach(function () {
+    describe('under normal conditions', function() {
+
+        beforeEach(function() {
             spyOn(Math, 'random').and.returnValue(0);
         });
 
-        it('planes can be instructed to land at an airport', function(){
+        it('planes can be instructed to land at an airport', function() {
             plane.land(airport);
             expect(airport.planes()).toContain(plane);
         });
 
-        it('planes can be instructed to takeoff', function(){
+        it('planes can be instructed to takeoff', function() {
             plane.land(airport);
             plane.takeOff();
             expect(airport.planes()).not.toContain(plane);
         });
     });
+
 
     describe('under stormy conditions', function () {
 

@@ -1,8 +1,10 @@
 "use strict";
 
+
 describe('Weather', function(){
 
     let weather = new Weather();
+    
 
     beforeEach(function () {
         weather = new Weather();
