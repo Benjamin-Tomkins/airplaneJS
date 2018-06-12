@@ -113,7 +113,7 @@ in spec/PlaneSpec.js :
 
 Note: jasmine spies are equivalent to doubles
 
-in src.Plane.js :
+in src'/Plane.js :
 ```
 
 + specify that the land prototype has an airport parameter
@@ -145,4 +145,43 @@ in src/Airport.js :
 
 Run the ```SpecRunner.html```</br>
 Note: you should be all green at this point!
+
+
+### Second user story
+
+in spec/FeatureSpec.js :
+```
+
++ Add an "it" 'planes can be instructed to takeoff'
++ Specify that a plane can land at an airport
++ Specify that a plane can takeoff()
++ expect that airport.planes() does not contain a plane
+
+```
+
+Run the ```SpecRunner.html```</br>
+
+in spec/FeatureSpec.js
+```
+
++ Update the createSpyObject to also include a clearForTakeOff mocked method
++ Add an "it" 'can takeoff from an airport'
++ land a plane at the airport
++ takeoff a plane
++ expect that airport.clearForTakeOff has been called 	...[thbc]
+
+```
+
+in src/Plane.js :
+```
+
+
+
+```
+
+
+
+
+
+
 
