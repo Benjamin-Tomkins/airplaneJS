@@ -278,9 +278,15 @@ in src/Weather.js :
 
 ```
 
+#### Injecting the weather into the Airport
 
+in src/Airport.js :
+```
 
++ Add a parameter to the Airport function that accepts the weather
++ Add a this._weather attribute and assign a typeof weather !== 'undefined' ? weather : new Weather()
 
+```
 
 
 
