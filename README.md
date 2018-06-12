@@ -147,7 +147,8 @@ Run the ```SpecRunner.html```</br>
 Note: you should be all green at this point!
 
 
-### Second user story
+### Steps for second user case reconstruction
+
 
 in spec/FeatureSpec.js :
 ```
@@ -161,7 +162,7 @@ in spec/FeatureSpec.js :
 
 Run the ```SpecRunner.html```</br>
 
-in spec/FeatureSpec.js
+in spec/FeatureSpec.js :
 ```
 
 + Update the createSpyObject to also include a clearForTakeOff mocked method
@@ -175,13 +176,31 @@ in spec/FeatureSpec.js
 in src/Plane.js :
 ```
 
-
++ Add a this._location variable to the land prototype and set it to the Airport being passed into the method parameter
++ Add a plane takeoff() prototype
++ Call the clearForTakeOff() method from this._location
 
 ```
 
+in spec/AirportSpec.js :
+```
 
++ Add an "it" 'can clear planes for takeoff'
++ Specify that a plane is clearForLanding form an airport
++ Specify that a plane is clearForTakeOff from an airport
++ expect that airport.planes() is equal to an empty array
 
+```
 
+Run the ```SpecRunner.html```</br>
+
+in src/Airport.js :
+```
+
++ Add a prototype method that can clearForTakeOff a plane
++ pop the plane off the this._hangar array
+
+```
 
 
 
