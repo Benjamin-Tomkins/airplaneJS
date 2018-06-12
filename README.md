@@ -92,5 +92,57 @@ in spec/AirportSpec.js, create a unit test for an Airport
 
 Run the ```SpecRunner.html```</br>
 
+in src/Airport.js
+```
 
++ define an Airport(){} function
++ defie an Airport prototype with planes method
+
+```
+
+Run the ```SpecRunner.html```</br>
+
+in spec/PlaneSpec.js :
+```
+
++ update the airport to use a jasmine createSpyObject for airport to have a simulated clearForLanding method 	...[cso]
++ in the 'it can land at an airport' update the plane.land to include an airport parameter
++ expect that airport.clearForLanding toHaveBeenCalledWith a plane 	...[thbcw]
+
+```
+
+Note: jasmine spies are equivalent to doubles
+
+in src.Plane.js :
+```
+
++ specify that the land prototype has an airport parameter
++ update the land method to call that an airport's clearedForLanding method can accept 'this' plane object
+
+```
+
+Run the ```SpecRunner.html```</br>
+
+in src/Airport.js :
+```
+
++ Update the plane instantiation to use a jasmine createSpy that simulates the plane having a lamd method 	...[cs]
++ Add an "it" 'can clear planes for landing'
++ Specify that an airport has a clearForlanding method which takes a plane as a parameter
++ expect that the airport contains a plane
+
+```
+
+in src/Airport.js :
+```
+
++ Add an Airport clearForLanding prototype which takes a plane as an argument
++ Add a this._hangar state variable which contains an empty array to store the planes
++ Update the planes prototype to return this.hangar()
++ Update the clearForLanding prototype to push a plane into the ._hangar
+
+```
+
+Run the ```SpecRunner.html```</br>
+Note: you should be all green at this point!
 
