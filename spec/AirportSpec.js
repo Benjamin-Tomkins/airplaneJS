@@ -8,18 +8,18 @@ describe('Airport', function() {
     let plane;
 
 
-    beforeEach(function(){
+    beforeEach(function() {
         weather = jasmine.createSpyObj('weather', ['isStormy']);
         airport = new Airport(weather);
         plane = jasmine.createSpy('plane', ['land']);
     });
 
-    it('Has no planes by default', function(){
+    it('Has no planes by default', function() {
         expect(airport.planes()).toEqual([]);
     });
 
 
-    describe("Under normal conditions", function(){
+    describe("Under normal conditions", function() {
 
         beforeEach(function() {
             weather.isStormy.and.returnValue(false);
