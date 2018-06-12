@@ -3,9 +3,9 @@
 
 describe('Airport', function() {
 
+    let weather;
     let airport;
     let plane;
-    let weather;
 
 
     beforeEach(function(){
