@@ -19,4 +19,5 @@ describe('Weather', function(){
         spyOn(Math, 'random').and.returnValue(0);
         expect(weather.isStormy()).toBeFalsy();
     });
+
 });
