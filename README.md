@@ -233,7 +233,14 @@ in src/Airport.js
 
 Run the ```SpecRunner.html```</br>
 
+in spec/AirportSpec.js
+```
 
++ Add a guard clause to clear a plane for takeoff
++ i.e. if this.isStormy() is true, throw new Error('cannot takeoff during a storm')
++ call this._hangar.pop or set the .hangar to an empty array
+
+```
 
 
 
