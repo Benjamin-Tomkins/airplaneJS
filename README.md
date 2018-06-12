@@ -202,5 +202,44 @@ in src/Airport.js :
 
 ```
 
+### Steps for third user case reconstruction
+
+
+in spec/FeatureSpec.js :
+```
+
++ Add "it" 'blocks takeoff when the weather is stormy'
++ Land a plane at the airport
++ Create a spyOn to call the original method and returnValue as true 	...[srv]
++ expect function(){plane.takeoff();} toThrowError 'cannot takeoff during a storm' 	...[tte]
++ expect the airport to contain a plane
+
+```
+
+in spec/AirportSpec.js :
+```
+
++ Add an "it" 'can check for stormy conditions'
++ expect airport.isStormy() toBeFalsy 	...[tbf]
+
+```
+
+in src/Airport.js
+```
+
++ Add an isStormy prototype and return false 
+
+```
+
+Run the ```SpecRunner.html```</br>
+
+
+
+
+
+
+
+
+
 
 
