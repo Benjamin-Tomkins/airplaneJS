@@ -246,11 +246,37 @@ Run the ```SpecRunner.html```</br>
 Note: all tests should be green
 
 
+### Steps for forth user case reconstruction
 
+Refactoring the code to extract the weather and add random functionality, using dependency injection to tell the Airport what kind of weather to have 
 
+create a new file : spec/WeatherSpec.js
+```
 
++ Add a describe 'Weather' 	...[desc]
++ specify a weather variable
++ Add a beforeEach to instantiate the Weather function 	...[be]
++ Add an "it" 'gives stormy sometimes'
++ Add a mock spyOn with Math 'random'and returnValue 1
++ expect weather.isStormy toBeTruthy 	...[tbt]
 
++ Add an "it" 'gives not stormy other times'
++ Add a mock spyOn with Math 'random' and returnValue 0
++ expect weather.isStormy toBeFalsy 	...[tbf]
 
+```
+
+Run the ```SpecRunner.html```</br>
+
+in src/Weather.js :
+```
+
++ define a Weather function(){}
++ Add a this._CHANCE_OF_STORMY attribute to 0.5
++ Add an isStormy prototype
++ Return Math.random() > this._CHANCE_OF_STORMY
+
+```
 
 
 
